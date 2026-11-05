@@ -176,7 +176,7 @@ Harga jual OTP per layanan & negara: modal provider (USD) → IDR (kurs USDT, di
 
 - `mark_up`: angka = tambahan Rp tetap (`500` → +Rp500); teks berakhiran `%` = persen (`"10%"` → +10%). Contoh: harga dasar 10.000 + `500` = 10.500; 10.000 + `"10%"` = 11.000. Kosong/invalid = 0.
 - `device` hanya di-echo di respons (identitas pemanggil), tidak mempengaruhi modal provider.
-- Respons: `{"status": true, "kurs_usdt_idr": 18100, "providers": {"hero_sms": {"error": null, "prices": {...}}, ...}, "harga_jual": {"11600": {"root": 10400, "profit_idr": 2278, "providers": {"sms_bower": {"modal_usd": 0.51, "modal_idr": 9322, "stok": 12}}}}}` — `root` = harga dasar sebelum mark_up.
+- Respons: `{"status": true, "kurs_usdt_idr": 18100, "providers": {"hero_sms": {"error": null, "prices": {...}}, ...}, "harga_jual": {"11000": {"profit_ress": 1000, "profit_idr": 2600, "providers": {"sms_bower": {"modal_usd": 0.4641, "modal_idr": 8400, "stok": 12}}}}}` — `profit_ress` = nilai mark_up dalam rupiah (contoh: harga dasar 10000, mark_up 10% → 1000; markup 0 → 0, kolom tabel tidak diisi bot).
 - Modal & stok di-cache di Redis `priceraw:{service}:{country}` **10 menit** — cache ini sengaja TANPA `mark_up`/`device`, jadi perubahan mark_up langsung berlaku tanpa menunggu cache.
 - Bot menyimpan mirror respons akhir di Redis bot-nya (TTL 10 menit, key `price:{device}:{service}:{country}` tanpa mark_up — nilai mark_up disimpan di dalam JSON; bila berbeda saat dibaca, mirror dianggap basi) — endpoint ini hanya dihubungi saat mirror kosong/basi.
 - Kurs USDT → IDR di-cache `kurs:usd:idr` **30 menit** (CoinGecko); gagal diambil → fallback 18.100.

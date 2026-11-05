@@ -155,9 +155,12 @@ async def _build_raw(session, country_item: dict, service_item: dict) -> dict:
 
 
 def _harga_jual(raw: dict, mark_up: tuple[str, float]) -> dict[str, dict]:
-    """otp_price(modal) + mark_up → {harga: {root, profit_idr, providers}} terurut naik.
+    """otp_price(modal) + mark_up → {harga: {profit_ress, profit_idr, providers}} terurut naik.
 
-    ``root`` = harga dasar SEBELUM mark_up (otp_price(modal)) — dipakai bot untuk pembukuan.
+    ``profit_ress`` = nilai mark_up dalam rupiah (harga_jual − otp_price(modal)):
+    flat = sama dengan nilai mark_up-nya; persen = selisih rupiahnya
+    (contoh dasar 10000, mark_up 10% → profit_ress 1000). Markup 0 → 0
+    (bot membiarkan kolom mark_up & profit_ress di tabel kosong).
     """
     offers: dict[str, dict] = {}
     for key, res in (raw.get("providers") or {}).items():
@@ -167,7 +170,7 @@ def _harga_jual(raw: dict, mark_up: tuple[str, float]) -> dict[str, dict]:
             selling = apply_mark_up(base, mark_up)
             offer = offers.setdefault(
                 str(selling),
-                {"root": base, "profit_idr": 0, "providers": {}},
+                {"profit_ress": selling - base, "profit_idr": 0, "providers": {}},
             )
             offer["profit_idr"] = selling - capital
             offer["providers"][key] = {
