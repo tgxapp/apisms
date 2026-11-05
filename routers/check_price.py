@@ -155,12 +155,14 @@ async def _build_raw(session, country_item: dict, service_item: dict) -> dict:
 
 
 def _harga_jual(raw: dict, mark_up: tuple[str, float]) -> dict[str, dict]:
-    """otp_price(modal) + mark_up → {harga: {profit_ress, profit_idr, providers}} terurut naik.
+    """otp_price(modal) + mark_up → {harga: {profit_idr, [profit_ress], providers}} terurut naik.
 
-    ``profit_ress`` = nilai mark_up dalam rupiah (harga_jual − otp_price(modal)):
-    flat = sama dengan nilai mark_up-nya; persen = selisih rupiahnya
-    (contoh dasar 10000, mark_up 10% → profit_ress 1000). Markup 0 → 0
-    (bot membiarkan kolom mark_up & profit_ress di tabel kosong).
+    Format mengikuti check_stock.py: ``profit_idr`` = profit murni otp_price
+    (harga dasar − modal) — nilainya SAMA baik dengan maupun tanpa mark_up.
+    ``profit_ress`` = nilai mark_up dalam rupiah (harga_jual − harga dasar); kunci ini
+    hanya muncul saat mark_up terpasang (flat = nilai mark_up-nya; persen = selisih
+    rupiahnya, contoh dasar 10000, 10% → 1000). Markup 0 → kunci profit_ress tidak
+    dikirim → bot membiarkan kolom mark_up & profit_ress di tabel kosong (NULL).
     """
     offers: dict[str, dict] = {}
     for key, res in (raw.get("providers") or {}).items():
@@ -168,11 +170,10 @@ def _harga_jual(raw: dict, mark_up: tuple[str, float]) -> dict[str, dict]:
             capital = int(capital_str)
             base = otp_price(capital)
             selling = apply_mark_up(base, mark_up)
-            offer = offers.setdefault(
-                str(selling),
-                {"profit_ress": selling - base, "profit_idr": 0, "providers": {}},
-            )
-            offer["profit_idr"] = selling - capital
+            offer = offers.setdefault(str(selling), {"profit_idr": 0, "providers": {}})
+            offer["profit_idr"] = base - capital
+            if mark_up[1]:
+                offer["profit_ress"] = selling - base
             offer["providers"][key] = {
                 "modal_usd": info.get("modal_usd"),
                 "modal_idr": capital,
