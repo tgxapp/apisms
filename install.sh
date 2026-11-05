@@ -131,7 +131,23 @@ fi
 
 echo
 echo "==> selesai"
-curl -fsS "http://127.0.0.1:${PORT}/" && echo
+# Tunggu uvicorn selesai bind port (start systemd butuh beberapa detik; curl tunggal
+# kerap kena "Connection refused" padahal service benar-benar hidup).
+up=0
+for _ in $(seq 1 15); do
+  if curl -fsS "http://127.0.0.1:${PORT}/" >/dev/null 2>&1; then
+    up=1
+    break
+  fi
+  sleep 1
+done
+if [ "${up}" = "1" ]; then
+  curl -fsS "http://127.0.0.1:${PORT}/" && echo
+else
+  echo "!! service belum merespons setelah 15 detik. Cek:"
+  echo "   systemctl status ${APP_NAME}"
+  echo "   journalctl -u ${APP_NAME} -n 50"
+fi
 if [ -n "${DOMAIN}" ]; then
   BASE_URL="https://${DOMAIN}"
 else
