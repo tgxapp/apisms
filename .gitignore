@@ -5,3 +5,4 @@ __pycache__/
 # Rahasia: api_key provider & api_key klien (isi manual di server).
 data/providers.json
 1.zip
+data/test_responses.json
