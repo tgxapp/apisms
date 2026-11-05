@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from urllib.parse import parse_qsl
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, BackgroundTasks, Request
@@ -11,6 +12,32 @@ router = APIRouter()
 # Lokasi activation_id di payload webhook provider (berbeda-beda antar provider).
 ID_FIELDS = ("activationId", "activation_id", "id", "activation")
 MAX_MESSAGES = 4
+
+
+def _flatten(body: bytes) -> dict:
+    """Body webhook → dict. JSON dulu, lalu form-urlencoded, terakhir teks polos.
+
+    Format webhook tiap provider belum tentu sama dengan dokumennya, jadi parsing
+    dibuat liberal dan body mentah selalu di-log di webhook()."""
+    text = (body or b"").decode("utf-8", "ignore").strip()
+    if not text:
+        return {}
+    try:
+        parsed = json.loads(text)
+    except ValueError:
+        parsed = None
+    if isinstance(parsed, dict):
+        return parsed
+    if isinstance(parsed, list):
+        # Bila provider mengirim array event, ambil objek terakhir (paling baru).
+        for item in reversed(parsed):
+            if isinstance(item, dict):
+                return item
+    if "=" in text:
+        pairs = parse_qsl(text, keep_blank_values=True)
+        if pairs:
+            return {key: value for key, value in pairs}
+    return {"text": text}
 
 
 def _activation_id(raw: dict) -> str:
@@ -79,17 +106,23 @@ async def webhook(provider: str, request: Request, tasks: BackgroundTasks) -> di
         return {"status": False, "message": f"provider tidak dikenal: {provider}"}
 
     body = await request.body()
-    try:
-        raw = json.loads(body or b"{}")
-    except ValueError:
-        raw = {"text": body.decode("utf-8", "ignore")}
-    if not isinstance(raw, dict):
-        raw = {"text": str(raw)}
+    # Log body mentah selalu (dipotong 400 char): ini satu-satunya cara melihat format
+    # webhook provider yang asli bila payload tidak cocok dengan dokumennya.
+    print(f"[WEBHOOK] {provider} body={body[:400]!r}", flush=True)
+    raw = _flatten(body)
 
-    if "activationId" not in raw and "id" not in raw:
-        # Sebagian provider mengirim form-encoded, bukan JSON.
-        form = await request.form()
-        raw = {**raw, **{k: str(v) for k, v in form.items()}}
+    if not _activation_id(raw):
+        # Usaha terakhir: form multipart/biasa (butuh python-multipart).
+        try:
+            form = await request.form()
+            raw = {**raw, **{key: str(value) for key, value in form.items()}}
+        except Exception as exc:
+            print(f"[WEBHOOK] {provider} form gagal: {exc}", flush=True)
+
+    if not _activation_id(raw):
+        # Balas 200 agar provider tidak mengulang kiriman yang sama; payload tercatat di log.
+        print(f"[WEBHOOK] {provider} payload tanpa activation_id: {raw}", flush=True)
+        return {"status": False, "message": "payload tanpa activation_id"}
 
     print(f"[WEBHOOK] {provider} masuk {raw}", flush=True)
     tasks.add_task(_handle, provider, raw)
