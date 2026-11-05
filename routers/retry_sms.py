@@ -40,7 +40,16 @@ async def retry_sms(payload: CheckRequest, request: Request) -> RetryResponse:
         raise HTTPException(status_code=429, detail="Batas permintaan SMS sudah tercapai.")
 
     cfg = PROVIDERS[payload.providers]
-    params = {"api_key": cfg["api_key"], "action": "getAnotherSms", "id": payload.activation_id}
+    # Semua provider kompatibel sms-activate: minta SMS berikutnya = setStatus status=3
+    # (jawaban sukses ACCESS_RETRY_GET). Action "getAnotherSms" tidak ada di protokol ini
+    # (grizzly/sms_bower: BAD_ACTION, hero_sms: "Method Not Found"). Grizzly memakai
+    # BAD_ACTION juga untuk id tak dikenal & BAD_STATUS untuk transisi state yang salah.
+    params = {
+        "api_key": cfg["api_key"],
+        "action": "setStatus",
+        "status": 3,
+        "id": payload.activation_id,
+    }
 
     async with request.app.state.session.get(cfg["base_url"], params=params) as resp:
         body = (await resp.text()).strip()

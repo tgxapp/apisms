@@ -102,20 +102,21 @@ Saat kode masuk (`STATUS_OK`):
 - `can_get_another_sms` diambil dari data `/order-sms` dan ikut dikirim di kedua status (dulu hilang, sehingga bot selalu menganggap `false`).
 - `401` `api_key` salah, `404` bila `{providers}:{activation_id}:{service}:{nomor}` tidak ada di Redis, `502` bila provider menolak.
 
-## POST /another-sms
+## POST /retry-sms
 
-Minta SMS tambahan untuk order yang sama (provider `getAnotherSms`, hanya jika `can_get_another_sms: true`).
+Minta SMS tambahan untuk order yang sama (provider `setStatus status=3`, hanya jika `can_get_another_sms: true`).
 
 ```json
 {"api_key": "<api_key dari data/providers.json>", "providers": "hero_sms", "activation_id": "1066819917", "service": "telegram", "nomor": "6285926556006"}
 ```
 
 ```json
-{"status": true, "providers": "hero_sms", "activation_id": "1066819917", "service": "telegram", "nomor": "6285926556006", "message": "ACCESS_READY"}
+{"status": true, "providers": "hero_sms", "activation_id": "1066819917", "service": "telegram", "nomor": "6285926556006", "message": "ACCESS_RETRY_GET"}
 ```
 
-- `message` = balasan mentah provider: `ACCESS_READY`, `ACCESS_RETRY_GET`, `STATUS_WAIT_CODE`, `STATUS_WAIT_RETRY` dianggap sukses.
-- `401` `api_key` salah, `404` order tidak ada di Redis, `502` provider menolak.
+- `message` = balasan mentah provider: `ACCESS_RETRY_GET` / `ACCESS_READY` dianggap sukses.
+- `401` `api_key` salah, `404` order tidak ada di Redis, `429` batas 4 SMS tercapai, `502` provider menolak
+  (mis. `BAD_STATUS` — belum ada SMS pertama / SMS berikutnya sudah diminta, `NO_ACTIVATION`, `BAD_ACTION`).
 
 ## POST /webhook/{providers}
 
