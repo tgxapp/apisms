@@ -178,7 +178,7 @@ Harga jual OTP per layanan & negara: modal provider (USD) → IDR (kurs USDT, di
 - `device` hanya di-echo di respons (identitas pemanggil), tidak mempengaruhi modal provider.
 - Respons: `{"status": true, "kurs_usdt_idr": 18100, "providers": {"hero_sms": {"error": null, "prices": {...}}, ...}, "harga_jual": {"10500": {"profit_idr": 1178, "providers": {"sms_bower": {"modal_usd": 0.51, "modal_idr": 9322, "stok": 12}}}}}`.
 - Modal & stok di-cache di Redis `priceraw:{service}:{country}` **10 menit** — cache ini sengaja TANPA `mark_up`/`device`, jadi perubahan mark_up langsung berlaku tanpa menunggu cache.
-- Bot menyimpan mirror respons akhir di Redis bot-nya (TTL 10 menit, key memuat tag `mark_up`) — endpoint ini hanya dihubungi saat mirror kosong.
+- Bot menyimpan mirror respons akhir di Redis bot-nya (TTL 10 menit, key `price:{device}:{service}:{country}` tanpa mark_up — nilai mark_up disimpan di dalam JSON; bila berbeda saat dibaca, mirror dianggap basi) — endpoint ini hanya dihubungi saat mirror kosong/basi.
 - Kurs USDT → IDR di-cache `kurs:usd:idr` **30 menit** (CoinGecko); gagal diambil → fallback 18.100.
 - `harga_jual` kosong = tidak ada stok di semua provider (bukan error).
 - `401` `api_key` salah; `status: false` + `message` bila layanan/negara tidak dikenal.
