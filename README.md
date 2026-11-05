@@ -34,7 +34,7 @@ chmod +x install.sh
 sudo ./install.sh apisms.domainkamu.com
 ```
 
-Script akan: install python3/nginx/certbot → copy ke `/var/www/apisms` → virtualenv + `requirements.txt` → systemd `apisms.service` (uvicorn 2 worker di `127.0.0.1:2020`) → nginx reverse proxy → HTTPS Let's Encrypt.
+Script akan: install python3/nginx/certbot → copy ke `/var/www/apisms` → virtualenv + `requirements.txt` → systemd `apisms.service` (hypercorn 2 worker di `127.0.0.1:2020`) → nginx reverse proxy → HTTPS Let's Encrypt.
 
 Tanpa domain (pakai IP VPS langsung):
 
@@ -43,7 +43,7 @@ chmod +x install.sh
 sudo ./install.sh
 ```
 
-nginx/certbot dilewati; uvicorn bind `0.0.0.0:2020` jadi API bisa diakses via `http://IP_VPS:2020` (order/check dilindungi `api_key`). Callback webhook di dashboard provider: `http://IP_VPS:2020/webhook/{providers}`. Port dibuka otomatis di ufw bila firewall aktif (security group cloud tetap dibuka manual di console). `/docs` ikut terbuka ke publik; tutup dengan `docs_url=None, redoc_url=None, openapi_url=None` di `main.py` bila perlu.
+nginx/certbot dilewati; hypercorn bind `0.0.0.0:2020` jadi API bisa diakses via `http://IP_VPS:2020` (order/check dilindungi `api_key`). Callback webhook di dashboard provider: `http://IP_VPS:2020/webhook/{providers}`. Port dibuka otomatis di ufw bila firewall aktif (security group cloud tetap dibuka manual di console). `/docs` ikut terbuka ke publik; tutup dengan `docs_url=None, redoc_url=None, openapi_url=None` di `main.py` bila perlu.
 
 Cek log: `journalctl -u apisms -f`
 

@@ -1,4 +1,8 @@
 fastapi>=0.110
+# Hypercorn dipakai di server: uvicorn (httptools) membuang body request yang memakai
+# header "Upgrade: h2c" (webhook sms_bower/klien Guzzle HTTP/2), hypercorn menerimanya
+# sebagai HTTP/1.1 normal. uvicorn tetap di sini untuk `python main.py` di lokal.
+hypercorn>=0.17
 uvicorn[standard]>=0.29
 aiohttp>=3.9
 pydantic>=2.6

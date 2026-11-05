@@ -68,7 +68,7 @@ User=${APP_USER}
 Group=${APP_USER}
 WorkingDirectory=${APP_DIR}
 Environment=PYTHONUNBUFFERED=1
-ExecStart=${APP_DIR}/.venv/bin/uvicorn main:app --host ${BIND_HOST} --port ${PORT} --workers 2 --timeout-keep-alive 120 --proxy-headers --forwarded-allow-ips 127.0.0.1
+ExecStart=${APP_DIR}/.venv/bin/hypercorn main:app --bind ${BIND_HOST}:${PORT} --workers 2 --keep-alive 120 --access-logfile -
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
