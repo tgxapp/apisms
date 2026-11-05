@@ -161,7 +161,7 @@ Opsional `"force": true` → abaikan cache Redis dan cek ulang ke provider.
 
 - `countries` = negara yang ada stok di **minimal satu** provider; `unavailable` = sisanya (semua `id_country.json`).
 - Hasil disimpan ke Redis `blok:{service}` selama **30 hari**; request berikutnya dijawab dari Redis tanpa menghubungi provider.
-- Ini **sumber kebenaran** blok negara: bot membaca lewat endpoint ini dan menyimpan mirror read-through sendiri di Redis bot (TTL 24 jam) untuk memangkas panggilan — mirror selalu diisi ulang dari sini.
+- Ini **sumber kebenaran** blok negara: bot membaca lewat endpoint ini dan menyimpan mirror read-through sendiri di Redis bot (TTL 30 hari, sama dengan cache di sini) untuk memangkas panggilan — mirror selalu diisi ulang dari sini.
 - Provider yang error dilewati. Kalau **semua** provider gagal → `502` (jangan anggap semua negara kosong); kalau hanya sebagian gagal, hasil tetap disimpan.
 - `401` `api_key` salah, `404` layanan tidak dikenal.
 - `service` menerima id (`telegram`) atau nama (`Telegram`), huruf besar/kecil bebas.
