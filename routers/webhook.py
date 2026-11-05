@@ -66,7 +66,8 @@ async def _handle(provider: str, raw: dict) -> None:
             ),
         }
         saved["status"] = "success"
-        await get_redis().set(key, json.dumps(saved))
+        # keepttl: TTL 24 jam dari /order-sms tidak di-reset; tanpa ini key order jadi abadi.
+        await get_redis().set(key, json.dumps(saved), keepttl=True)
         print(f"[WEBHOOK] {provider} {key} simpan {slot} text={text!r}", flush=True)
 
 
