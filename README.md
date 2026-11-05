@@ -61,10 +61,10 @@ Ingin dokumentasi tidak bisa diakses publik? Ubah `main.py` menjadi:
 app = FastAPI(title="apisms", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
 ```
 
-`data/providers.json` berisi `api_key` per provider dan `api_key` klien (field `api_key` di body request). File ini **rahasia dan tidak ikut di repo** (ada di `.gitignore`) — buat manual di server dengan bentuk:
+`data/providers.json` berisi `api_key` per provider, `api_key` klien (field `api_key` di body request), dan `redis_url`. File ini **rahasia dan tidak ikut di repo** (ada di `.gitignore`) — buat manual di server dengan bentuk:
 
 ```json
-{"api_key": "<api_key klien>", "providers": {"grizzly_sms": {"name": "grizzly_sms", "base_url": "https://...", "api_key": "..."}, "sms_bower": {"name": "sms_bower", "base_url": "https://...", "api_key": "..."}, "hero_sms": {"name": "hero_sms", "base_url": "https://...", "api_key": "..."}}}
+{"api_key": "<api_key klien>", "redis_url": "<redis://... — opsional; kosong = Redis lokal 127.0.0.1:6379>", "providers": {"grizzly_sms": {"name": "grizzly_sms", "base_url": "https://...", "api_key": "..."}, "sms_bower": {"name": "sms_bower", "base_url": "https://...", "api_key": "..."}, "hero_sms": {"name": "hero_sms", "base_url": "https://...", "api_key": "..."}}}
 ```
 
 ## POST /order-sms

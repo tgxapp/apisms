@@ -9,8 +9,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 WIB = ZoneInfo("Asia/Jakarta")
 
-# Isi password Redis di server (jangan di-commit): redis://default:<PASSWORD>@<host>:<port>
-REDIS_URL = "redis://default:<PASSWORD_REDIS>@redis-12797.c292.ap-southeast-1-1.ec2.cloud.redislabs.com:12797"
 ORDER_TTL = 24 * 60 * 60
 # Hasil /check-country: 30 hari (daftar negara di provider jarang berubah).
 COUNTRY_TTL = 30 * 24 * 60 * 60
@@ -29,6 +27,8 @@ def read_json(path: Path) -> list | dict:
 APP = read_json(DATA_DIR / "providers.json")
 PROVIDERS = APP.get("providers") or {}
 API_KEY = str(APP.get("api_key") or "")
+# URL Redis dibaca dari providers.json juga; bila tidak diisi → Redis lokal di server.
+REDIS_URL = str(APP.get("redis_url") or "redis://127.0.0.1:6379/0")
 
 SERVICES = {item["id"].lower(): item for item in read_json(DATA_DIR / "id_service.json")}
 COUNTRIES = {item["name"].lower(): item for item in read_json(DATA_DIR / "id_country.json")}
