@@ -1,0 +1,1650 @@
+[
+  {
+    "code": "id",
+    "name": "indonesia",
+    "flag_emoji_id": "5291937150814661333",
+    "hero_sms": 6,
+    "sms_bower": 6,
+    "grizzly_sms": 6
+  },
+  {
+    "code": "my",
+    "name": "malaysia",
+    "flag_emoji_id": "5339498171246588311",
+    "hero_sms": 7,
+    "sms_bower": 7,
+    "grizzly_sms": 7
+  },
+  {
+    "code": "sg",
+    "name": "singapore",
+    "flag_emoji_id": "5292144120993686909",
+    "hero_sms": 196,
+    "sms_bower": 196,
+    "grizzly_sms": 10351
+  },
+  {
+    "code": "th",
+    "name": "thailand",
+    "flag_emoji_id": "5341471408071390957",
+    "hero_sms": 52,
+    "sms_bower": 52,
+    "grizzly_sms": 52
+  },
+  {
+    "code": "vn",
+    "name": "vietnam",
+    "flag_emoji_id": "5474542319673812606",
+    "hero_sms": 10,
+    "sms_bower": 10,
+    "grizzly_sms": 10
+  },
+  {
+    "code": "ph",
+    "name": "philippines",
+    "flag_emoji_id": "5460873607729129032",
+    "hero_sms": 4,
+    "sms_bower": 4,
+    "grizzly_sms": 4
+  },
+  {
+    "code": "bn",
+    "name": "brunei",
+    "flag_emoji_id": "5467415349727083629",
+    "hero_sms": 121,
+    "sms_bower": 121,
+    "grizzly_sms": 121
+  },
+  {
+    "code": "kh",
+    "name": "cambodia",
+    "flag_emoji_id": "5357374413543062283",
+    "hero_sms": 24,
+    "sms_bower": 24,
+    "grizzly_sms": 24
+  },
+  {
+    "code": "la",
+    "name": "laos",
+    "flag_emoji_id": "5426971433702012873",
+    "hero_sms": 25,
+    "sms_bower": 25,
+    "grizzly_sms": 25
+  },
+  {
+    "code": "mm",
+    "name": "myanmar",
+    "flag_emoji_id": "5188162778073935826",
+    "hero_sms": 5,
+    "sms_bower": 5,
+    "grizzly_sms": 5
+  },
+  {
+    "code": "tl",
+    "name": "timor-leste",
+    "flag_emoji_id": "5422602597263489621",
+    "hero_sms": 91,
+    "sms_bower": 91,
+    "grizzly_sms": 91
+  },
+  {
+    "code": "jp",
+    "name": "japan",
+    "flag_emoji_id": "5456261908069885892",
+    "hero_sms": 182,
+    "sms_bower": 1001,
+    "grizzly_sms": 182
+  },
+  {
+    "code": "kr",
+    "name": "south korea",
+    "flag_emoji_id": "5456531898304047227",
+    "hero_sms": null,
+    "sms_bower": 1002,
+    "grizzly_sms": 10350
+  },
+  {
+    "code": "cn",
+    "name": "china",
+    "flag_emoji_id": "5431782733376399004",
+    "hero_sms": 3,
+    "sms_bower": 3,
+    "grizzly_sms": 3
+  },
+  {
+    "code": "tw",
+    "name": "taiwan",
+    "flag_emoji_id": "5222365101595568847",
+    "hero_sms": 55,
+    "sms_bower": 55,
+    "grizzly_sms": 55
+  },
+  {
+    "code": "hk",
+    "name": "hong kong",
+    "flag_emoji_id": "5222395857856374392",
+    "hero_sms": 14,
+    "sms_bower": 14,
+    "grizzly_sms": 14
+  },
+  {
+    "code": "in",
+    "name": "india",
+    "flag_emoji_id": "5447419223242449630",
+    "hero_sms": 22,
+    "sms_bower": 22,
+    "grizzly_sms": 22
+  },
+  {
+    "code": "pk",
+    "name": "pakistan",
+    "flag_emoji_id": "5269660289321679111",
+    "hero_sms": 66,
+    "sms_bower": 66,
+    "grizzly_sms": 66
+  },
+  {
+    "code": "bd",
+    "name": "bangladesh",
+    "flag_emoji_id": "5222131025877936317",
+    "hero_sms": 60,
+    "sms_bower": 60,
+    "grizzly_sms": 60
+  },
+  {
+    "code": "lk",
+    "name": "sri lanka",
+    "flag_emoji_id": "5341732791191091574",
+    "hero_sms": 64,
+    "sms_bower": 64,
+    "grizzly_sms": 64
+  },
+  {
+    "code": "np",
+    "name": "nepal",
+    "flag_emoji_id": "5413521039239955481",
+    "hero_sms": 81,
+    "sms_bower": 81,
+    "grizzly_sms": 81
+  },
+  {
+    "code": "gb",
+    "name": "united kingdom",
+    "flag_emoji_id": "5202196682497859879",
+    "hero_sms": 16,
+    "sms_bower": 16,
+    "grizzly_sms": 16
+  },
+  {
+    "code": "de",
+    "name": "germany",
+    "flag_emoji_id": "5409360418520967565",
+    "hero_sms": 43,
+    "sms_bower": 43,
+    "grizzly_sms": 43
+  },
+  {
+    "code": "fr",
+    "name": "france",
+    "flag_emoji_id": "5202132623060640759",
+    "hero_sms": 78,
+    "sms_bower": 78,
+    "grizzly_sms": 78
+  },
+  {
+    "code": "nl",
+    "name": "netherlands",
+    "flag_emoji_id": "5411124743841524806",
+    "hero_sms": 48,
+    "sms_bower": 48,
+    "grizzly_sms": 48
+  },
+  {
+    "code": "it",
+    "name": "italy",
+    "flag_emoji_id": "5449723275628259037",
+    "hero_sms": 86,
+    "sms_bower": 86,
+    "grizzly_sms": 86
+  },
+  {
+    "code": "es",
+    "name": "spain",
+    "flag_emoji_id": "5201957744877248121",
+    "hero_sms": 56,
+    "sms_bower": 56,
+    "grizzly_sms": 56
+  },
+  {
+    "code": "pt",
+    "name": "portugal",
+    "flag_emoji_id": "5382075788369605892",
+    "hero_sms": 117,
+    "sms_bower": 117,
+    "grizzly_sms": 117
+  },
+  {
+    "code": "be",
+    "name": "belgium",
+    "flag_emoji_id": "5411564862025244994",
+    "hero_sms": 82,
+    "sms_bower": 82,
+    "grizzly_sms": 82
+  },
+  {
+    "code": "ch",
+    "name": "switzerland",
+    "flag_emoji_id": "5442703336266543270",
+    "hero_sms": 173,
+    "sms_bower": 173,
+    "grizzly_sms": 173
+  },
+  {
+    "code": "at",
+    "name": "austria",
+    "flag_emoji_id": "5409096965227031137",
+    "hero_sms": 50,
+    "sms_bower": 50,
+    "grizzly_sms": 50
+  },
+  {
+    "code": "se",
+    "name": "sweden",
+    "flag_emoji_id": "5384542551296455687",
+    "hero_sms": 46,
+    "sms_bower": 46,
+    "grizzly_sms": 46
+  },
+  {
+    "code": "no",
+    "name": "norway",
+    "flag_emoji_id": "5382300771641470186",
+    "hero_sms": 174,
+    "sms_bower": 174,
+    "grizzly_sms": 174
+  },
+  {
+    "code": "dk",
+    "name": "denmark",
+    "flag_emoji_id": "5381854399985366436",
+    "hero_sms": 172,
+    "sms_bower": 172,
+    "grizzly_sms": 172
+  },
+  {
+    "code": "fi",
+    "name": "finland",
+    "flag_emoji_id": "5382151560182642075",
+    "hero_sms": 163,
+    "sms_bower": 163,
+    "grizzly_sms": 163
+  },
+  {
+    "code": "pl",
+    "name": "poland",
+    "flag_emoji_id": "5291847690940852675",
+    "hero_sms": 15,
+    "sms_bower": 15,
+    "grizzly_sms": 15
+  },
+  {
+    "code": "ie",
+    "name": "ireland",
+    "flag_emoji_id": "5411194670204069594",
+    "hero_sms": 23,
+    "sms_bower": 23,
+    "grizzly_sms": 23
+  },
+  {
+    "code": "ru",
+    "name": "russia",
+    "flag_emoji_id": "5449408995691341691",
+    "hero_sms": null,
+    "sms_bower": 0,
+    "grizzly_sms": null
+  },
+  {
+    "code": "ua",
+    "name": "ukraine",
+    "flag_emoji_id": "5447309366568953338",
+    "hero_sms": 1,
+    "sms_bower": 1,
+    "grizzly_sms": 1
+  },
+  {
+    "code": "tr",
+    "name": "turkey",
+    "flag_emoji_id": "5226948110873278599",
+    "hero_sms": 62,
+    "sms_bower": 62,
+    "grizzly_sms": 62
+  },
+  {
+    "code": "us",
+    "name": "united states",
+    "flag_emoji_id": "5202021044105257611",
+    "hero_sms": 187,
+    "sms_bower": 187,
+    "grizzly_sms": 187
+  },
+  {
+    "code": "ca",
+    "name": "canada",
+    "flag_emoji_id": "5382084502858249131",
+    "hero_sms": 36,
+    "sms_bower": 36,
+    "grizzly_sms": 36
+  },
+  {
+    "code": "au",
+    "name": "australia",
+    "flag_emoji_id": "5382062173323276195",
+    "hero_sms": 175,
+    "sms_bower": 175,
+    "grizzly_sms": 175
+  },
+  {
+    "code": "nz",
+    "name": "new zealand",
+    "flag_emoji_id": "5269712902671055050",
+    "hero_sms": 67,
+    "sms_bower": 67,
+    "grizzly_sms": 67
+  },
+  {
+    "code": "ae",
+    "name": "united arab emirates",
+    "flag_emoji_id": "5449495646656537594",
+    "hero_sms": 95,
+    "sms_bower": 95,
+    "grizzly_sms": 95
+  },
+  {
+    "code": "sa",
+    "name": "saudi arabia",
+    "flag_emoji_id": "5202079966761590204",
+    "hero_sms": 53,
+    "sms_bower": 53,
+    "grizzly_sms": 53
+  },
+  {
+    "code": "qa",
+    "name": "qatar",
+    "flag_emoji_id": "5228799250367788944",
+    "hero_sms": 111,
+    "sms_bower": 111,
+    "grizzly_sms": 111
+  },
+  {
+    "code": "kw",
+    "name": "kuwait",
+    "flag_emoji_id": "5429154466794317724",
+    "hero_sms": 100,
+    "sms_bower": 100,
+    "grizzly_sms": 100
+  },
+  {
+    "code": "il",
+    "name": "israel",
+    "flag_emoji_id": "5332299462461107995",
+    "hero_sms": 13,
+    "sms_bower": 13,
+    "grizzly_sms": 13
+  },
+  {
+    "code": "eg",
+    "name": "egypt",
+    "flag_emoji_id": "5226476858471626962",
+    "hero_sms": 21,
+    "sms_bower": 21,
+    "grizzly_sms": 21
+  },
+  {
+    "code": "za",
+    "name": "south africa",
+    "flag_emoji_id": "5341547124049852736",
+    "hero_sms": 31,
+    "sms_bower": 31,
+    "grizzly_sms": 31
+  },
+  {
+    "code": "br",
+    "name": "brazil",
+    "flag_emoji_id": "5202074005346983800",
+    "hero_sms": 73,
+    "sms_bower": 73,
+    "grizzly_sms": 73
+  },
+  {
+    "code": "mx",
+    "name": "mexico",
+    "flag_emoji_id": "5382126374494417411",
+    "hero_sms": 54,
+    "sms_bower": 54,
+    "grizzly_sms": 54
+  },
+  {
+    "code": "ar",
+    "name": "argentina",
+    "flag_emoji_id": "5262873863036872166",
+    "hero_sms": 39,
+    "sms_bower": 39,
+    "grizzly_sms": 39
+  },
+  {
+    "code": "af",
+    "name": "afghanistan",
+    "flag_emoji_id": "5341723801824541640",
+    "hero_sms": 74,
+    "sms_bower": 74,
+    "grizzly_sms": 74
+  },
+  {
+    "code": "al",
+    "name": "albania",
+    "flag_emoji_id": "5442808872202942144",
+    "hero_sms": 155,
+    "sms_bower": 155,
+    "grizzly_sms": 155
+  },
+  {
+    "code": "dz",
+    "name": "algeria",
+    "flag_emoji_id": "5269400778807720624",
+    "hero_sms": 58,
+    "sms_bower": 58,
+    "grizzly_sms": 58
+  },
+  {
+    "code": "as",
+    "name": "american samoa",
+    "flag_emoji_id": "5233381108594260837",
+    "hero_sms": null,
+    "sms_bower": null,
+    "grizzly_sms": 10161
+  },
+  {
+    "code": "ad",
+    "name": "andorra",
+    "flag_emoji_id": "5229127072336589200",
+    "hero_sms": null,
+    "sms_bower": null,
+    "grizzly_sms": 1062
+  },
+  {
+    "code": "ao",
+    "name": "angola",
+    "flag_emoji_id": "5221978936791017415",
+    "hero_sms": 76,
+    "sms_bower": 76,
+    "grizzly_sms": 76
+  },
+  {
+    "code": "ai",
+    "name": "anguilla",
+    "flag_emoji_id": "5454237677098384174",
+    "hero_sms": 181,
+    "sms_bower": 181,
+    "grizzly_sms": 181
+  },
+  {
+    "code": "ag",
+    "name": "antigua and barbuda",
+    "flag_emoji_id": "5233687283927892876",
+    "hero_sms": 169,
+    "sms_bower": 169,
+    "grizzly_sms": 169
+  },
+  {
+    "code": "am",
+    "name": "armenia",
+    "flag_emoji_id": "5411455658186778270",
+    "hero_sms": 148,
+    "sms_bower": 148,
+    "grizzly_sms": 148
+  },
+  {
+    "code": "aw",
+    "name": "aruba",
+    "flag_emoji_id": "5231044964212817289",
+    "hero_sms": 179,
+    "sms_bower": 179,
+    "grizzly_sms": 179
+  },
+  {
+    "code": "az",
+    "name": "azerbaijan",
+    "flag_emoji_id": "5224254431939275524",
+    "hero_sms": 35,
+    "sms_bower": 35,
+    "grizzly_sms": 35
+  },
+  {
+    "code": "bs",
+    "name": "bahamas",
+    "flag_emoji_id": "5429268893313017179",
+    "hero_sms": 122,
+    "sms_bower": 122,
+    "grizzly_sms": 122
+  },
+  {
+    "code": "bh",
+    "name": "bahrain",
+    "flag_emoji_id": "5229186179676517309",
+    "hero_sms": 145,
+    "sms_bower": 145,
+    "grizzly_sms": 145
+  },
+  {
+    "code": "bb",
+    "name": "barbados",
+    "flag_emoji_id": "5222119223307807441",
+    "hero_sms": 118,
+    "sms_bower": 118,
+    "grizzly_sms": 118
+  },
+  {
+    "code": "by",
+    "name": "belarus",
+    "flag_emoji_id": "5382219601054544127",
+    "hero_sms": 51,
+    "sms_bower": 51,
+    "grizzly_sms": 51
+  },
+  {
+    "code": "bz",
+    "name": "belize",
+    "flag_emoji_id": "5231366665853224722",
+    "hero_sms": 124,
+    "sms_bower": 124,
+    "grizzly_sms": 124
+  },
+  {
+    "code": "bj",
+    "name": "benin",
+    "flag_emoji_id": "5429270924832548299",
+    "hero_sms": 120,
+    "sms_bower": 120,
+    "grizzly_sms": 120
+  },
+  {
+    "code": "bm",
+    "name": "bermuda",
+    "flag_emoji_id": "5454179609140544421",
+    "hero_sms": null,
+    "sms_bower": 1003,
+    "grizzly_sms": 1003
+  },
+  {
+    "code": "bt",
+    "name": "bhutan",
+    "flag_emoji_id": "5420163176098446088",
+    "hero_sms": 158,
+    "sms_bower": 158,
+    "grizzly_sms": 158
+  },
+  {
+    "code": "bo",
+    "name": "bolivia",
+    "flag_emoji_id": "5357272214796255046",
+    "hero_sms": 92,
+    "sms_bower": 92,
+    "grizzly_sms": 92
+  },
+  {
+    "code": "ba",
+    "name": "bosnia and herzegovina",
+    "flag_emoji_id": "5382033281078275575",
+    "hero_sms": 108,
+    "sms_bower": 108,
+    "grizzly_sms": 108
+  },
+  {
+    "code": "bw",
+    "name": "botswana",
+    "flag_emoji_id": "5422594827667653377",
+    "hero_sms": 123,
+    "sms_bower": 123,
+    "grizzly_sms": 123
+  },
+  {
+    "code": "bg",
+    "name": "bulgaria",
+    "flag_emoji_id": "5408875181705799521",
+    "hero_sms": 83,
+    "sms_bower": 83,
+    "grizzly_sms": 83
+  },
+  {
+    "code": "bf",
+    "name": "burkina faso",
+    "flag_emoji_id": "5474323070183285988",
+    "hero_sms": 152,
+    "sms_bower": 152,
+    "grizzly_sms": 152
+  },
+  {
+    "code": "bi",
+    "name": "burundi",
+    "flag_emoji_id": "5357542359649237058",
+    "hero_sms": 119,
+    "sms_bower": 119,
+    "grizzly_sms": 119
+  },
+  {
+    "code": "cm",
+    "name": "cameroon",
+    "flag_emoji_id": "5474681124426884947",
+    "hero_sms": 41,
+    "sms_bower": 41,
+    "grizzly_sms": 41
+  },
+  {
+    "code": "cv",
+    "name": "cape verde",
+    "flag_emoji_id": "5233184244473283152",
+    "hero_sms": 186,
+    "sms_bower": 186,
+    "grizzly_sms": 186
+  },
+  {
+    "code": "ky",
+    "name": "cayman islands",
+    "flag_emoji_id": "5454177075109839093",
+    "hero_sms": 170,
+    "sms_bower": 170,
+    "grizzly_sms": 170
+  },
+  {
+    "code": "cf",
+    "name": "central african republic",
+    "flag_emoji_id": "5422628135139031178",
+    "hero_sms": 125,
+    "sms_bower": 125,
+    "grizzly_sms": 125
+  },
+  {
+    "code": "td",
+    "name": "chad",
+    "flag_emoji_id": "5411229867461060921",
+    "hero_sms": 42,
+    "sms_bower": 42,
+    "grizzly_sms": 42
+  },
+  {
+    "code": "cl",
+    "name": "chile",
+    "flag_emoji_id": "5222427035023977899",
+    "hero_sms": 151,
+    "sms_bower": 151,
+    "grizzly_sms": 151
+  },
+  {
+    "code": "co",
+    "name": "colombia",
+    "flag_emoji_id": "5341564321098907092",
+    "hero_sms": 33,
+    "sms_bower": 33,
+    "grizzly_sms": 33
+  },
+  {
+    "code": "km",
+    "name": "comoros",
+    "flag_emoji_id": "5422342777511886475",
+    "hero_sms": 133,
+    "sms_bower": 133,
+    "grizzly_sms": 133
+  },
+  {
+    "code": "cr",
+    "name": "costa rica",
+    "flag_emoji_id": "5269494559418629149",
+    "hero_sms": 93,
+    "sms_bower": 93,
+    "grizzly_sms": 93
+  },
+  {
+    "code": "hr",
+    "name": "croatia",
+    "flag_emoji_id": "5262677003210860950",
+    "hero_sms": 45,
+    "sms_bower": 45,
+    "grizzly_sms": 45
+  },
+  {
+    "code": "cu",
+    "name": "cuba",
+    "flag_emoji_id": "5357035553508308603",
+    "hero_sms": 113,
+    "sms_bower": 113,
+    "grizzly_sms": 113
+  },
+  {
+    "code": "cy",
+    "name": "cyprus",
+    "flag_emoji_id": "5228997115216149309",
+    "hero_sms": 77,
+    "sms_bower": 77,
+    "grizzly_sms": 77
+  },
+  {
+    "code": "cz",
+    "name": "czech republic",
+    "flag_emoji_id": "5429496861587156146",
+    "hero_sms": 63,
+    "sms_bower": 63,
+    "grizzly_sms": 63
+  },
+  {
+    "code": "dj",
+    "name": "djibouti",
+    "flag_emoji_id": "5458586718032634511",
+    "hero_sms": 168,
+    "sms_bower": 168,
+    "grizzly_sms": 168
+  },
+  {
+    "code": "dm",
+    "name": "dominica",
+    "flag_emoji_id": "5231486851923069595",
+    "hero_sms": 126,
+    "sms_bower": 126,
+    "grizzly_sms": 126
+  },
+  {
+    "code": "do",
+    "name": "dominican republic",
+    "flag_emoji_id": "5427236235615683748",
+    "hero_sms": 109,
+    "sms_bower": 109,
+    "grizzly_sms": 109
+  },
+  {
+    "code": "cd",
+    "name": "dr congo",
+    "flag_emoji_id": "5269407491841603689",
+    "hero_sms": 18,
+    "sms_bower": 18,
+    "grizzly_sms": 18
+  },
+  {
+    "code": "ec",
+    "name": "ecuador",
+    "flag_emoji_id": "5359624993586034294",
+    "hero_sms": 105,
+    "sms_bower": 105,
+    "grizzly_sms": 105
+  },
+  {
+    "code": "sv",
+    "name": "el salvador",
+    "flag_emoji_id": "5427301849831061043",
+    "hero_sms": 101,
+    "sms_bower": 101,
+    "grizzly_sms": 101
+  },
+  {
+    "code": "gq",
+    "name": "equatorial guinea",
+    "flag_emoji_id": "5447111931217324976",
+    "hero_sms": 167,
+    "sms_bower": 167,
+    "grizzly_sms": 167
+  },
+  {
+    "code": "er",
+    "name": "eritrea",
+    "flag_emoji_id": "5420548035232937623",
+    "hero_sms": 176,
+    "sms_bower": 176,
+    "grizzly_sms": 176
+  },
+  {
+    "code": "ee",
+    "name": "estonia",
+    "flag_emoji_id": "5411174505332615466",
+    "hero_sms": 34,
+    "sms_bower": 34,
+    "grizzly_sms": 34
+  },
+  {
+    "code": "sz",
+    "name": "eswatini",
+    "flag_emoji_id": "5422587427438998925",
+    "hero_sms": 106,
+    "sms_bower": 106,
+    "grizzly_sms": 106
+  },
+  {
+    "code": "et",
+    "name": "ethiopia",
+    "flag_emoji_id": "5269679685393989166",
+    "hero_sms": 71,
+    "sms_bower": 71,
+    "grizzly_sms": 71
+  },
+  {
+    "code": "fj",
+    "name": "fiji",
+    "flag_emoji_id": "5454336104863908516",
+    "hero_sms": 189,
+    "sms_bower": 189,
+    "grizzly_sms": 189
+  },
+  {
+    "code": "gf",
+    "name": "french guiana",
+    "flag_emoji_id": "5233523014313720667",
+    "hero_sms": 162,
+    "sms_bower": 162,
+    "grizzly_sms": 162
+  },
+  {
+    "code": "pf",
+    "name": "french polynesia",
+    "flag_emoji_id": "5467450310760874001",
+    "hero_sms": null,
+    "sms_bower": null,
+    "grizzly_sms": 1012
+  },
+  {
+    "code": "ga",
+    "name": "gabon",
+    "flag_emoji_id": "5408983586680350780",
+    "hero_sms": 154,
+    "sms_bower": 154,
+    "grizzly_sms": 154
+  },
+  {
+    "code": "gm",
+    "name": "gambia",
+    "flag_emoji_id": "5420472705801536529",
+    "hero_sms": 28,
+    "sms_bower": 28,
+    "grizzly_sms": 28
+  },
+  {
+    "code": "ge",
+    "name": "georgia",
+    "flag_emoji_id": "5440371950708864925",
+    "hero_sms": 128,
+    "sms_bower": 128,
+    "grizzly_sms": 128
+  },
+  {
+    "code": "gh",
+    "name": "ghana",
+    "flag_emoji_id": "5188676065320511388",
+    "hero_sms": 38,
+    "sms_bower": 38,
+    "grizzly_sms": 38
+  },
+  {
+    "code": "gi",
+    "name": "gibraltar",
+    "flag_emoji_id": "5226496954623603888",
+    "hero_sms": 201,
+    "sms_bower": 201,
+    "grizzly_sms": 201
+  },
+  {
+    "code": "gr",
+    "name": "greece",
+    "flag_emoji_id": "5381889099026149370",
+    "hero_sms": 129,
+    "sms_bower": 129,
+    "grizzly_sms": 129
+  },
+  {
+    "code": "gl",
+    "name": "greenland",
+    "flag_emoji_id": "5221969376193816323",
+    "hero_sms": null,
+    "sms_bower": 1008,
+    "grizzly_sms": 1008
+  },
+  {
+    "code": "gd",
+    "name": "grenada",
+    "flag_emoji_id": "5467787680441976258",
+    "hero_sms": 127,
+    "sms_bower": 127,
+    "grizzly_sms": 127
+  },
+  {
+    "code": "gp",
+    "name": "guadeloupe",
+    "flag_emoji_id": "5467664243081886165",
+    "hero_sms": 160,
+    "sms_bower": 160,
+    "grizzly_sms": 160
+  },
+  {
+    "code": "gt",
+    "name": "guatemala",
+    "flag_emoji_id": "5357434603214748263",
+    "hero_sms": 94,
+    "sms_bower": 94,
+    "grizzly_sms": 94
+  },
+  {
+    "code": "gn",
+    "name": "guinea",
+    "flag_emoji_id": "5408977500711691863",
+    "hero_sms": 68,
+    "sms_bower": 68,
+    "grizzly_sms": 68
+  },
+  {
+    "code": "gw",
+    "name": "guinea-bissau",
+    "flag_emoji_id": "5429574437286454077",
+    "hero_sms": 130,
+    "sms_bower": 130,
+    "grizzly_sms": 130
+  },
+  {
+    "code": "gy",
+    "name": "guyana",
+    "flag_emoji_id": "5420413662886117194",
+    "hero_sms": 131,
+    "sms_bower": 131,
+    "grizzly_sms": 131
+  },
+  {
+    "code": "ht",
+    "name": "haiti",
+    "flag_emoji_id": "5357490485034236365",
+    "hero_sms": 26,
+    "sms_bower": 26,
+    "grizzly_sms": 26
+  },
+  {
+    "code": "hn",
+    "name": "honduras",
+    "flag_emoji_id": "5224205572391315540",
+    "hero_sms": 88,
+    "sms_bower": 88,
+    "grizzly_sms": 88
+  },
+  {
+    "code": "hu",
+    "name": "hungary",
+    "flag_emoji_id": "5409065547541260699",
+    "hero_sms": 84,
+    "sms_bower": 84,
+    "grizzly_sms": 84
+  },
+  {
+    "code": "is",
+    "name": "iceland",
+    "flag_emoji_id": "5226903563472483349",
+    "hero_sms": 132,
+    "sms_bower": 132,
+    "grizzly_sms": 132
+  },
+  {
+    "code": "ir",
+    "name": "iran",
+    "flag_emoji_id": "5271878966347601947",
+    "hero_sms": 57,
+    "sms_bower": 57,
+    "grizzly_sms": 10016
+  },
+  {
+    "code": "iq",
+    "name": "iraq",
+    "flag_emoji_id": "5229059314932528805",
+    "hero_sms": 47,
+    "sms_bower": 47,
+    "grizzly_sms": 47
+  },
+  {
+    "code": "ci",
+    "name": "ivory coast",
+    "flag_emoji_id": "5411283953984218884",
+    "hero_sms": 27,
+    "sms_bower": 27,
+    "grizzly_sms": 27
+  },
+  {
+    "code": "jm",
+    "name": "jamaica",
+    "flag_emoji_id": "5420144630429667484",
+    "hero_sms": 103,
+    "sms_bower": 103,
+    "grizzly_sms": 103
+  },
+  {
+    "code": "jo",
+    "name": "jordan",
+    "flag_emoji_id": "5460834231468959552",
+    "hero_sms": 116,
+    "sms_bower": 116,
+    "grizzly_sms": 116
+  },
+  {
+    "code": "kz",
+    "name": "kazakhstan",
+    "flag_emoji_id": "5228718354658769982",
+    "hero_sms": 2,
+    "sms_bower": 2,
+    "grizzly_sms": 2
+  },
+  {
+    "code": "ke",
+    "name": "kenya",
+    "flag_emoji_id": "5269725950781699509",
+    "hero_sms": 8,
+    "sms_bower": 8,
+    "grizzly_sms": 8
+  },
+  {
+    "code": "xk",
+    "name": "kosovo",
+    "flag_emoji_id": "5442767700646442025",
+    "hero_sms": 203,
+    "sms_bower": 1004,
+    "grizzly_sms": 203
+  },
+  {
+    "code": "kg",
+    "name": "kyrgyzstan",
+    "flag_emoji_id": "5427268877367130483",
+    "hero_sms": 11,
+    "sms_bower": 11,
+    "grizzly_sms": 11
+  },
+  {
+    "code": "lv",
+    "name": "latvia",
+    "flag_emoji_id": "5269650286342846979",
+    "hero_sms": 49,
+    "sms_bower": 49,
+    "grizzly_sms": 49
+  },
+  {
+    "code": "lb",
+    "name": "lebanon",
+    "flag_emoji_id": "5427118703835625983",
+    "hero_sms": 153,
+    "sms_bower": 153,
+    "grizzly_sms": 153
+  },
+  {
+    "code": "ls",
+    "name": "lesotho",
+    "flag_emoji_id": "5422515422312281871",
+    "hero_sms": 136,
+    "sms_bower": 136,
+    "grizzly_sms": 136
+  },
+  {
+    "code": "lr",
+    "name": "liberia",
+    "flag_emoji_id": "5422520224085720580",
+    "hero_sms": 135,
+    "sms_bower": 135,
+    "grizzly_sms": 135
+  },
+  {
+    "code": "ly",
+    "name": "libya",
+    "flag_emoji_id": "5222284437814783192",
+    "hero_sms": 102,
+    "sms_bower": 102,
+    "grizzly_sms": 102
+  },
+  {
+    "code": "li",
+    "name": "liechtenstein",
+    "flag_emoji_id": "5226703795953612903",
+    "hero_sms": 200,
+    "sms_bower": 1005,
+    "grizzly_sms": 10348
+  },
+  {
+    "code": "lt",
+    "name": "lithuania",
+    "flag_emoji_id": "5411197345968695511",
+    "hero_sms": 44,
+    "sms_bower": 44,
+    "grizzly_sms": 44
+  },
+  {
+    "code": "lu",
+    "name": "luxembourg",
+    "flag_emoji_id": "5411158944666101440",
+    "hero_sms": 165,
+    "sms_bower": 165,
+    "grizzly_sms": 165
+  },
+  {
+    "code": "mo",
+    "name": "macao",
+    "flag_emoji_id": "5420505321783179067",
+    "hero_sms": 20,
+    "sms_bower": 20,
+    "grizzly_sms": 20
+  },
+  {
+    "code": "mg",
+    "name": "madagascar",
+    "flag_emoji_id": "5429165814097913547",
+    "hero_sms": 17,
+    "sms_bower": 17,
+    "grizzly_sms": 17
+  },
+  {
+    "code": "mw",
+    "name": "malawi",
+    "flag_emoji_id": "5341341330691863561",
+    "hero_sms": 137,
+    "sms_bower": 137,
+    "grizzly_sms": 137
+  },
+  {
+    "code": "mv",
+    "name": "maldives",
+    "flag_emoji_id": "5233344051616430964",
+    "hero_sms": 159,
+    "sms_bower": 159,
+    "grizzly_sms": 159
+  },
+  {
+    "code": "ml",
+    "name": "mali",
+    "flag_emoji_id": "5411259459785730007",
+    "hero_sms": 69,
+    "sms_bower": 69,
+    "grizzly_sms": 69
+  },
+  {
+    "code": "mt",
+    "name": "malta",
+    "flag_emoji_id": "5226954282741283529",
+    "hero_sms": 199,
+    "sms_bower": 199,
+    "grizzly_sms": 199
+  },
+  {
+    "code": "mq",
+    "name": "martinique",
+    "flag_emoji_id": "5470045239806802915",
+    "hero_sms": null,
+    "sms_bower": 1011,
+    "grizzly_sms": 1011
+  },
+  {
+    "code": "mr",
+    "name": "mauritania",
+    "flag_emoji_id": "5422465115360345921",
+    "hero_sms": 114,
+    "sms_bower": 114,
+    "grizzly_sms": 114
+  },
+  {
+    "code": "mu",
+    "name": "mauritius",
+    "flag_emoji_id": "5269757084999628216",
+    "hero_sms": 157,
+    "sms_bower": 157,
+    "grizzly_sms": 157
+  },
+  {
+    "code": "md",
+    "name": "moldova",
+    "flag_emoji_id": "5442607966517736672",
+    "hero_sms": 85,
+    "sms_bower": 85,
+    "grizzly_sms": 85
+  },
+  {
+    "code": "mc",
+    "name": "monaco",
+    "flag_emoji_id": "5289959262540277451",
+    "hero_sms": 144,
+    "sms_bower": 144,
+    "grizzly_sms": 144
+  },
+  {
+    "code": "mn",
+    "name": "mongolia",
+    "flag_emoji_id": "5420481703758019034",
+    "hero_sms": 72,
+    "sms_bower": 72,
+    "grizzly_sms": 72
+  },
+  {
+    "code": "me",
+    "name": "montenegro",
+    "flag_emoji_id": "5440827745523216914",
+    "hero_sms": 171,
+    "sms_bower": 171,
+    "grizzly_sms": 171
+  },
+  {
+    "code": "ms",
+    "name": "montserrat",
+    "flag_emoji_id": "5454038304716504375",
+    "hero_sms": 180,
+    "sms_bower": 180,
+    "grizzly_sms": 180
+  },
+  {
+    "code": "ma",
+    "name": "morocco",
+    "flag_emoji_id": "5260720207520867861",
+    "hero_sms": 37,
+    "sms_bower": 37,
+    "grizzly_sms": 37
+  },
+  {
+    "code": "mz",
+    "name": "mozambique",
+    "flag_emoji_id": "5429106139822303027",
+    "hero_sms": 80,
+    "sms_bower": 80,
+    "grizzly_sms": 80
+  },
+  {
+    "code": "na",
+    "name": "namibia",
+    "flag_emoji_id": "5420229786746239476",
+    "hero_sms": 138,
+    "sms_bower": 138,
+    "grizzly_sms": 138
+  },
+  {
+    "code": "nc",
+    "name": "new caledonia",
+    "flag_emoji_id": "5233223766762338378",
+    "hero_sms": 185,
+    "sms_bower": 185,
+    "grizzly_sms": 185
+  },
+  {
+    "code": "ni",
+    "name": "nicaragua",
+    "flag_emoji_id": "5426842228200847679",
+    "hero_sms": 90,
+    "sms_bower": 90,
+    "grizzly_sms": 90
+  },
+  {
+    "code": "ne",
+    "name": "niger",
+    "flag_emoji_id": "5339240099546673885",
+    "hero_sms": 139,
+    "sms_bower": 139,
+    "grizzly_sms": 139
+  },
+  {
+    "code": "ng",
+    "name": "nigeria",
+    "flag_emoji_id": "5411568100430587798",
+    "hero_sms": 19,
+    "sms_bower": 19,
+    "grizzly_sms": 19
+  },
+  {
+    "code": "nu",
+    "name": "niue",
+    "flag_emoji_id": "5454251094576218954",
+    "hero_sms": 204,
+    "sms_bower": 204,
+    "grizzly_sms": 204
+  },
+  {
+    "code": "mk",
+    "name": "north macedonia",
+    "flag_emoji_id": "5442634591020003500",
+    "hero_sms": 183,
+    "sms_bower": 183,
+    "grizzly_sms": 183
+  },
+  {
+    "code": "om",
+    "name": "oman",
+    "flag_emoji_id": "5269663308683688305",
+    "hero_sms": 107,
+    "sms_bower": 107,
+    "grizzly_sms": 107
+  },
+  {
+    "code": "ps",
+    "name": "palestine",
+    "flag_emoji_id": "5449405314904369668",
+    "hero_sms": 188,
+    "sms_bower": 188,
+    "grizzly_sms": 188
+  },
+  {
+    "code": "pa",
+    "name": "panama",
+    "flag_emoji_id": "5269271835299560112",
+    "hero_sms": 112,
+    "sms_bower": 112,
+    "grizzly_sms": 112
+  },
+  {
+    "code": "pg",
+    "name": "papua new guinea",
+    "flag_emoji_id": "5426911591922678926",
+    "hero_sms": 79,
+    "sms_bower": 79,
+    "grizzly_sms": 79
+  },
+  {
+    "code": "py",
+    "name": "paraguay",
+    "flag_emoji_id": "5426992955783134297",
+    "hero_sms": 87,
+    "sms_bower": 87,
+    "grizzly_sms": 87
+  },
+  {
+    "code": "pe",
+    "name": "peru",
+    "flag_emoji_id": "5409100220812239915",
+    "hero_sms": 65,
+    "sms_bower": 65,
+    "grizzly_sms": 65
+  },
+  {
+    "code": "pr",
+    "name": "puerto rico",
+    "flag_emoji_id": "5269767070798592290",
+    "hero_sms": 97,
+    "sms_bower": 97,
+    "grizzly_sms": 97
+  },
+  {
+    "code": "cg",
+    "name": "republic of the congo",
+    "flag_emoji_id": "5422479718249151727",
+    "hero_sms": 150,
+    "sms_bower": 150,
+    "grizzly_sms": 150
+  },
+  {
+    "code": "re",
+    "name": "reunion",
+    "flag_emoji_id": "5420322107068267129",
+    "hero_sms": 146,
+    "sms_bower": 146,
+    "grizzly_sms": 146
+  },
+  {
+    "code": "ro",
+    "name": "romania",
+    "flag_emoji_id": "5411159898148840778",
+    "hero_sms": 32,
+    "sms_bower": 32,
+    "grizzly_sms": 32
+  },
+  {
+    "code": "rw",
+    "name": "rwanda",
+    "flag_emoji_id": "5359528550095402400",
+    "hero_sms": 140,
+    "sms_bower": 140,
+    "grizzly_sms": 140
+  },
+  {
+    "code": "kn",
+    "name": "saint kitts and nevis",
+    "flag_emoji_id": "5231087492978982103",
+    "hero_sms": 134,
+    "sms_bower": 134,
+    "grizzly_sms": 134
+  },
+  {
+    "code": "lc",
+    "name": "saint lucia",
+    "flag_emoji_id": "5222280134257551597",
+    "hero_sms": 164,
+    "sms_bower": 164,
+    "grizzly_sms": 164
+  },
+  {
+    "code": "vc",
+    "name": "saint vincent and the grenadines",
+    "flag_emoji_id": "5467396563540131322",
+    "hero_sms": 166,
+    "sms_bower": 166,
+    "grizzly_sms": 166
+  },
+  {
+    "code": "ws",
+    "name": "samoa",
+    "flag_emoji_id": "5233271161726450295",
+    "hero_sms": 198,
+    "sms_bower": null,
+    "grizzly_sms": 10231
+  },
+  {
+    "code": "st",
+    "name": "sao tome and principe",
+    "flag_emoji_id": "5429484951642842713",
+    "hero_sms": 178,
+    "sms_bower": 178,
+    "grizzly_sms": 178
+  },
+  {
+    "code": "sn",
+    "name": "senegal",
+    "flag_emoji_id": "5474274146210817219",
+    "hero_sms": 61,
+    "sms_bower": 61,
+    "grizzly_sms": 61
+  },
+  {
+    "code": "rs",
+    "name": "serbia",
+    "flag_emoji_id": "5384313376136507326",
+    "hero_sms": 29,
+    "sms_bower": 29,
+    "grizzly_sms": 29
+  },
+  {
+    "code": "sc",
+    "name": "seychelles",
+    "flag_emoji_id": "5231446105568329752",
+    "hero_sms": 184,
+    "sms_bower": 184,
+    "grizzly_sms": 184
+  },
+  {
+    "code": "sl",
+    "name": "sierra leone",
+    "flag_emoji_id": "5411093944631044380",
+    "hero_sms": 115,
+    "sms_bower": 115,
+    "grizzly_sms": 115
+  },
+  {
+    "code": "sx",
+    "name": "sint maarten",
+    "flag_emoji_id": "5461113820955027461",
+    "hero_sms": null,
+    "sms_bower": 1006,
+    "grizzly_sms": 10349
+  },
+  {
+    "code": "sk",
+    "name": "slovakia",
+    "flag_emoji_id": "5381967160056755878",
+    "hero_sms": 141,
+    "sms_bower": 141,
+    "grizzly_sms": 141
+  },
+  {
+    "code": "si",
+    "name": "slovenia",
+    "flag_emoji_id": "5440874620796284751",
+    "hero_sms": 59,
+    "sms_bower": 59,
+    "grizzly_sms": 59
+  },
+  {
+    "code": "so",
+    "name": "somalia",
+    "flag_emoji_id": "5474375863921288686",
+    "hero_sms": 149,
+    "sms_bower": 149,
+    "grizzly_sms": 149
+  },
+  {
+    "code": "ss",
+    "name": "south sudan",
+    "flag_emoji_id": "5458535642281552190",
+    "hero_sms": 177,
+    "sms_bower": 177,
+    "grizzly_sms": 177
+  },
+  {
+    "code": "sd",
+    "name": "sudan",
+    "flag_emoji_id": "5431435781623260953",
+    "hero_sms": 98,
+    "sms_bower": 1010,
+    "grizzly_sms": null
+  },
+  {
+    "code": "sr",
+    "name": "suriname",
+    "flag_emoji_id": "5467524222853071645",
+    "hero_sms": 142,
+    "sms_bower": 142,
+    "grizzly_sms": 142
+  },
+  {
+    "code": "sy",
+    "name": "syria",
+    "flag_emoji_id": "5308002793812955097",
+    "hero_sms": 110,
+    "sms_bower": 1333,
+    "grizzly_sms": 110
+  },
+  {
+    "code": "tj",
+    "name": "tajikistan",
+    "flag_emoji_id": "5427304285077516492",
+    "hero_sms": 143,
+    "sms_bower": 143,
+    "grizzly_sms": 143
+  },
+  {
+    "code": "tz",
+    "name": "tanzania",
+    "flag_emoji_id": "5269360178481872158",
+    "hero_sms": 9,
+    "sms_bower": 9,
+    "grizzly_sms": 9
+  },
+  {
+    "code": "tg",
+    "name": "togo",
+    "flag_emoji_id": "5426845148778609404",
+    "hero_sms": 99,
+    "sms_bower": 99,
+    "grizzly_sms": 99
+  },
+  {
+    "code": "to",
+    "name": "tonga",
+    "flag_emoji_id": "5467490150877508877",
+    "hero_sms": null,
+    "sms_bower": null,
+    "grizzly_sms": 10227
+  },
+  {
+    "code": "tt",
+    "name": "trinidad and tobago",
+    "flag_emoji_id": "5420380776321533161",
+    "hero_sms": 104,
+    "sms_bower": 104,
+    "grizzly_sms": 104
+  },
+  {
+    "code": "tn",
+    "name": "tunisia",
+    "flag_emoji_id": "5357130455105679545",
+    "hero_sms": 89,
+    "sms_bower": 89,
+    "grizzly_sms": 89
+  },
+  {
+    "code": "tm",
+    "name": "turkmenistan",
+    "flag_emoji_id": "5422512652058379683",
+    "hero_sms": 161,
+    "sms_bower": 161,
+    "grizzly_sms": 161
+  },
+  {
+    "code": "ug",
+    "name": "uganda",
+    "flag_emoji_id": "5267090670518025063",
+    "hero_sms": 75,
+    "sms_bower": 75,
+    "grizzly_sms": 75
+  },
+  {
+    "code": "uy",
+    "name": "uruguay",
+    "flag_emoji_id": "5269256068474616775",
+    "hero_sms": 156,
+    "sms_bower": 156,
+    "grizzly_sms": 156
+  },
+  {
+    "code": "uz",
+    "name": "uzbekistan",
+    "flag_emoji_id": "5449829434334912605",
+    "hero_sms": 40,
+    "sms_bower": 40,
+    "grizzly_sms": 40
+  },
+  {
+    "code": "vu",
+    "name": "vanuatu",
+    "flag_emoji_id": "5469952197930267656",
+    "hero_sms": null,
+    "sms_bower": 1007,
+    "grizzly_sms": 1007
+  },
+  {
+    "code": "ve",
+    "name": "venezuela",
+    "flag_emoji_id": "5228751795274136090",
+    "hero_sms": 70,
+    "sms_bower": 70,
+    "grizzly_sms": 70
+  },
+  {
+    "code": "ye",
+    "name": "yemen",
+    "flag_emoji_id": "5408878892557542535",
+    "hero_sms": 30,
+    "sms_bower": 30,
+    "grizzly_sms": 30
+  },
+  {
+    "code": "zm",
+    "name": "zambia",
+    "flag_emoji_id": "5339279432857171449",
+    "hero_sms": 147,
+    "sms_bower": 147,
+    "grizzly_sms": 147
+  },
+  {
+    "code": "zw",
+    "name": "zimbabwe",
+    "flag_emoji_id": "5357255314099943456",
+    "hero_sms": 96,
+    "sms_bower": 96,
+    "grizzly_sms": 96
+  }
+]
