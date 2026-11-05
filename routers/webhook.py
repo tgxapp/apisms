@@ -106,10 +106,17 @@ async def webhook(provider: str, request: Request, tasks: BackgroundTasks) -> di
         return {"status": False, "message": f"provider tidak dikenal: {provider}"}
 
     body = await request.body()
-    # Log body mentah selalu (dipotong 400 char): ini satu-satunya cara melihat format
-    # webhook provider yang asli bila payload tidak cocok dengan dokumennya.
-    print(f"[WEBHOOK] {provider} body={body[:400]!r}", flush=True)
-    raw = _flatten(body)
+    query = {key: value for key, value in request.query_params.items()}
+    # Log semuanya (dipotong): sebagian provider kirim data lewat body, sebagian lewat
+    # query string, dan tidak semua sesuai dokumen — ini satu-satunya cara melihat format
+    # aslinya bila payload tidak cocok.
+    print(
+        f"[WEBHOOK] {provider} {request.method} qs={query} "
+        f"headers={dict(request.headers)} body={body[:400]!r}",
+        flush=True,
+    )
+    # Body mengalahkan query bila keduanya ada.
+    raw = {**query, **_flatten(body)}
 
     if not _activation_id(raw):
         # Usaha terakhir: form multipart/biasa (butuh python-multipart).
