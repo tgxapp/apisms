@@ -161,7 +161,7 @@ Opsional `"force": true` → abaikan cache Redis dan cek ulang ke provider.
 
 - `countries` = negara yang ada stok di **minimal satu** provider; `unavailable` = sisanya (semua `id_country.json`).
 - Hasil disimpan ke Redis `blok:{service}` selama **30 hari**; request berikutnya dijawab dari Redis tanpa menghubungi provider.
-- Ini **penyimpanan tunggal** blok negara: bot membaca lewat endpoint ini (`database/redis/block.py` → `get_blocked()`), tidak menyimpan salinannya sendiri.
+- Ini **sumber kebenaran** blok negara: bot membaca lewat endpoint ini dan menyimpan mirror read-through sendiri di Redis bot (TTL 24 jam) untuk memangkas panggilan — mirror selalu diisi ulang dari sini.
 - Provider yang error dilewati. Kalau **semua** provider gagal → `502` (jangan anggap semua negara kosong); kalau hanya sebagian gagal, hasil tetap disimpan.
 - `401` `api_key` salah, `404` layanan tidak dikenal.
 - `service` menerima id (`telegram`) atau nama (`Telegram`), huruf besar/kecil bebas.
@@ -178,6 +178,7 @@ Harga jual OTP per layanan & negara: modal provider (USD) → IDR (kurs USDT, di
 - `device` hanya di-echo di respons (identitas pemanggil), tidak mempengaruhi modal provider.
 - Respons: `{"status": true, "kurs_usdt_idr": 18100, "providers": {"hero_sms": {"error": null, "prices": {...}}, ...}, "harga_jual": {"10500": {"profit_idr": 1178, "providers": {"sms_bower": {"modal_usd": 0.51, "modal_idr": 9322, "stok": 12}}}}}`.
 - Modal & stok di-cache di Redis `priceraw:{service}:{country}` **10 menit** — cache ini sengaja TANPA `mark_up`/`device`, jadi perubahan mark_up langsung berlaku tanpa menunggu cache.
+- Bot menyimpan mirror respons akhir di Redis bot-nya (TTL 10 menit, key memuat tag `mark_up`) — endpoint ini hanya dihubungi saat mirror kosong.
 - Kurs USDT → IDR di-cache `kurs:usd:idr` **30 menit** (CoinGecko); gagal diambil → fallback 18.100.
 - `harga_jual` kosong = tidak ada stok di semua provider (bukan error).
 - `401` `api_key` salah; `status: false` + `message` bila layanan/negara tidak dikenal.
