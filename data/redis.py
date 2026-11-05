@@ -60,3 +60,33 @@ async def save_blocked(service: str, countries: list[str], ttl: int) -> None:
     if int(await client.ttl(key)) < 0:
         await client.expire(key, int(ttl))
     print(f"[REDIS] sadd {key} {len(countries)} negara ttl={ttl}", flush=True)
+
+
+KURS_KEY = "kurs:usd:idr"
+
+
+async def get_kurs() -> float | None:
+    """Kurs USDT → IDR (TTL 30 menit); ``None`` bila belum ada."""
+    raw = await get_redis().get(KURS_KEY)
+    try:
+        return float(raw) if raw else None
+    except (TypeError, ValueError):
+        return None
+
+
+async def save_kurs(rate: float, ttl: int) -> None:
+    await get_redis().set(KURS_KEY, str(rate), ex=int(ttl))
+
+
+def price_raw_key(service: str, country: str) -> str:
+    """Cache modal & stok provider (TANPA harga jual — mark_up dihitung saat dibaca)."""
+    return f"priceraw:{str(service or '').strip().lower()}:{str(country or '').strip().lower()}"
+
+
+async def get_price_raw(service: str, country: str) -> dict | None:
+    raw = await get_redis().get(price_raw_key(service, country))
+    return json.loads(raw) if raw else None
+
+
+async def save_price_raw(service: str, country: str, data: dict, ttl: int) -> None:
+    await get_redis().set(price_raw_key(service, country), json.dumps(data), ex=int(ttl))

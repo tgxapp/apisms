@@ -12,6 +12,12 @@ WIB = ZoneInfo("Asia/Jakarta")
 ORDER_TTL = 24 * 60 * 60
 # Hasil /check-country: 30 hari (daftar negara di provider jarang berubah).
 COUNTRY_TTL = 30 * 24 * 60 * 60
+# Modal & stok dari provider: 10 menit (harga jual dihitung ulang dari cache ini per mark_up).
+PRICE_TTL = 10 * 60
+# Kurs USDT → IDR dari CoinGecko: 30 menit; bila gagal diambil pakai nilai darurat.
+KURS_TTL = 30 * 60
+KURS_FALLBACK = 18_100
+KURS_URL = "https://api.coingecko.com/api/v3/simple/price"
 
 # Kode mata uang provider -> USD (currency 840 = USD, 643 = RUB).
 CURRENCY_USD = {840: 1.0, 643: 0.0125}

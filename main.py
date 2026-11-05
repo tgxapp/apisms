@@ -6,6 +6,7 @@ import uvicorn
 from fastapi import FastAPI
 
 from routers.check_country import router as country_router
+from routers.check_price import router as price_router
 from routers.check_sms import router as check_router
 from routers.cancel_sms import router as cancel_router
 from routers.order_sms import close_session, get_session, router as order_router
@@ -26,6 +27,7 @@ app = FastAPI(title="apisms", lifespan=lifespan)
 app.include_router(order_router)
 app.include_router(check_router)
 app.include_router(country_router)
+app.include_router(price_router)
 app.include_router(retry_router)
 app.include_router(cancel_router)
 app.include_router(webhook_router)

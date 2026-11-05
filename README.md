@@ -1,6 +1,6 @@
 # apisms
 
-API nomor SMS. Endpoint `POST /order-sms` (beli nomor), `POST /check-sms` (cek kode SMS), `POST /another-sms` (minta SMS tambahan), `POST /check-country` (daftar negara yang tersedia per layanan), dan `POST /webhook/{providers}` (notifikasi SMS dari provider). Hasil order disimpan ke Redis (TTL 24 jam).
+API nomor SMS. Endpoint `POST /order-sms` (beli nomor), `POST /check-sms` (cek kode SMS), `POST /another-sms` (minta SMS tambahan), `POST /check-country` (daftar negara yang tersedia per layanan), `POST /check-price` (harga jual OTP + stok), dan `POST /webhook/{providers}` (notifikasi SMS dari provider). Hasil order disimpan ke Redis (TTL 24 jam).
 
 ```powershell
 cd apisms
@@ -16,6 +16,7 @@ apisms/
 │  ├─ order_sms.py         # endpoint POST /order-sms
 │  ├─ check_sms.py         # endpoint POST /check-sms
 │  ├─ check_country.py     # endpoint POST /check-country
+│  ├─ check_price.py       # endpoint POST /check-price (modal provider → harga jual + mark_up)
 │  ├─ another_sms.py       # endpoint POST /another-sms (minta SMS tambahan)
 │  ├─ webhook.py           # endpoint POST /webhook/{providers} (notifikasi SMS dari provider)
 └─ data/
@@ -159,8 +160,24 @@ Opsional `"force": true` → abaikan cache Redis dan cek ulang ke provider.
 ```
 
 - `countries` = negara yang ada stok di **minimal satu** provider; `unavailable` = sisanya (semua `id_country.json`).
-- Hasil disimpan ke Redis `country:{service}` selama **30 hari**; request berikutnya dijawab dari Redis tanpa menghubungi provider.
-- Bot juga membaca/menulis key `country:{service}` yang sama (`database/redis/block.py` → `ensure_countries()`), jadi cache dipakai bersama dengan fitur Pengaturan & Beli Nokos.
+- Hasil disimpan ke Redis `blok:{service}` selama **30 hari**; request berikutnya dijawab dari Redis tanpa menghubungi provider.
+- Ini **penyimpanan tunggal** blok negara: bot membaca lewat endpoint ini (`database/redis/block.py` → `get_blocked()`), tidak menyimpan salinannya sendiri.
 - Provider yang error dilewati. Kalau **semua** provider gagal → `502` (jangan anggap semua negara kosong); kalau hanya sebagian gagal, hasil tetap disimpan.
 - `401` `api_key` salah, `404` layanan tidak dikenal.
 - `service` menerima id (`telegram`) atau nama (`Telegram`), huruf besar/kecil bebas.
+
+## POST /check-price
+
+Harga jual OTP per layanan & negara: modal provider (USD) → IDR (kurs USDT, dibulatkan ke atas) → `otp_price()` → + `mark_up`. Satu-satunya tempat cek harga — bot memanggil endpoint ini, tidak mengakses provider langsung.
+
+```json
+{"api_key": "<api_key dari data/providers.json>", "device": "tgxnokos", "service": "telegram", "country": "indonesia", "mark_up": 500}
+```
+
+- `mark_up`: angka = tambahan Rp tetap (`500` → +Rp500); teks berakhiran `%` = persen (`"10%"` → +10%). Contoh: harga dasar 10.000 + `500` = 10.500; 10.000 + `"10%"` = 11.000. Kosong/invalid = 0.
+- `device` hanya di-echo di respons (identitas pemanggil), tidak mempengaruhi modal provider.
+- Respons: `{"status": true, "kurs_usdt_idr": 18100, "providers": {"hero_sms": {"error": null, "prices": {...}}, ...}, "harga_jual": {"10500": {"profit_idr": 1178, "providers": {"sms_bower": {"modal_usd": 0.51, "modal_idr": 9322, "stok": 12}}}}}`.
+- Modal & stok di-cache di Redis `priceraw:{service}:{country}` **10 menit** — cache ini sengaja TANPA `mark_up`/`device`, jadi perubahan mark_up langsung berlaku tanpa menunggu cache.
+- Kurs USDT → IDR di-cache `kurs:usd:idr` **30 menit** (CoinGecko); gagal diambil → fallback 18.100.
+- `harga_jual` kosong = tidak ada stok di semua provider (bukan error).
+- `401` `api_key` salah; `status: false` + `message` bila layanan/negara tidak dikenal.

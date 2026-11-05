@@ -81,7 +81,8 @@ async def check_country(payload: CheckCountryRequest) -> CheckCountryResponse:
     service_id = str(services.get("id") or payload.service)
     blocked = await get_blocked(service_id)
     if blocked is not None and not payload.force:
-        # Cache SET blok:{service} = negara yang tidak tersedia (dipakai juga oleh bot).
+        # Cache SET blok:{service} = negara yang tidak tersedia. Ini penyimpanan TUNGGAL —
+    # bot membaca lewat endpoint ini, tidak menyimpan salinannya sendiri.
         available = [item["name"] for item in COUNTRIES.values() if item["name"] not in blocked]
         unavailable = [item["name"] for item in COUNTRIES.values() if item["name"] in blocked]
         print(f"[COUNTRY] 200 {service_id} dari redis blok (tersedia={len(available)})", flush=True)
