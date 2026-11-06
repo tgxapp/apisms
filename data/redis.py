@@ -37,31 +37,6 @@ async def get_order(providers: str, activation_id: str, service: str, phone: str
     return json.loads(raw) if raw else None
 
 
-def block_key(service: str) -> str:
-    return f"blok:{str(service or '').strip().lower()}"
-
-
-async def get_blocked(service: str) -> set[str] | None:
-    """Negara yang diblok (SET), ``None`` bila key belum ada (perlu cek provider)."""
-    client = get_redis()
-    key = block_key(service)
-    if not await client.exists(key):
-        return None
-    return {str(item) for item in await client.smembers(key)}
-
-
-async def save_blocked(service: str, countries: list[str], ttl: int) -> None:
-    """Tambah negara yang tidak tersedia ke SET ``blok:{service}``; TTL diset saat set masih kosong."""
-    client = get_redis()
-    key = block_key(service)
-    if not countries:
-        return
-    await client.sadd(key, *[str(item) for item in countries])
-    if int(await client.ttl(key)) < 0:
-        await client.expire(key, int(ttl))
-    print(f"[REDIS] sadd {key} {len(countries)} negara ttl={ttl}", flush=True)
-
-
 KURS_KEY = "kurs:usd:idr"
 
 

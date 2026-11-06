@@ -10,8 +10,6 @@ DATA_DIR = BASE_DIR / "data"
 WIB = ZoneInfo("Asia/Jakarta")
 
 ORDER_TTL = 24 * 60 * 60
-# Hasil /check-country: 30 hari (daftar negara di provider jarang berubah).
-COUNTRY_TTL = 30 * 24 * 60 * 60
 # Modal & stok dari provider: 10 menit (harga jual dihitung ulang dari cache ini per mark_up).
 PRICE_TTL = 10 * 60
 # Kurs USDT → IDR dari CoinGecko: 30 menit; bila gagal diambil pakai nilai darurat.
@@ -36,7 +34,30 @@ API_KEY = str(APP.get("api_key") or "")
 # URL Redis dibaca dari providers.json juga; bila tidak diisi → Redis lokal di server.
 REDIS_URL = str(APP.get("redis_url") or "redis://127.0.0.1:6379/0")
 
-SERVICES = {item["id"].lower(): item for item in read_json(DATA_DIR / "id_service.json")}
+
+def _load_services(path: Path) -> dict:
+    """service.json (master-nya di folder ``servers/`` bot, disalin ke sini) → peta id layanan.
+
+    Kode provider di file sumber berbentuk objek ``{"code": ..., "country": [...]}``;
+    di sini diratakan menjadi string kode saja supaya routers tetap membaca
+    ``svc[provider]`` sebagai kode layanan.
+    """
+    out: dict = {}
+    for item in read_json(path):
+        if not isinstance(item, dict):
+            continue
+        service_id = str(item.get("id") or "").strip()
+        if not service_id:
+            continue
+        entry: dict = {"id": service_id, "name": str(item.get("name") or "").strip()}
+        for provider in ("hero_sms", "sms_bower", "grizzly_sms"):
+            block = item.get(provider)
+            entry[provider] = str(block.get("code") or "").strip() if isinstance(block, dict) else ""
+        out[service_id.lower()] = entry
+    return out
+
+
+SERVICES = _load_services(DATA_DIR / "service.json")
 COUNTRIES = {item["name"].lower(): item for item in read_json(DATA_DIR / "id_country.json")}
 
 

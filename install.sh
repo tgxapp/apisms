@@ -51,7 +51,7 @@ if [ ! -s "${APP_DIR}/data/providers.json" ]; then
   echo "!! data/providers.json kosong. Isi api_key provider & api_key klien dulu."
   exit 1
 fi
-for f in id_service.json id_country.json; do
+for f in service.json id_country.json; do
   [ -s "${APP_DIR}/data/${f}" ] || { echo "!! data/${f} tidak ada."; exit 1; }
 done
 

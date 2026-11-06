@@ -38,7 +38,6 @@ class CheckPriceResponse(BaseModel):
     device: str = ""
     service: str = ""
     country: str = ""
-    kurs_usdt_idr: float = 0.0
     providers: dict[str, dict] = Field(default_factory=dict)
     harga_jual: dict[str, dict] = Field(default_factory=dict)
     message: str = ""
@@ -231,7 +230,6 @@ async def check_price(payload: CheckPriceRequest, request: Request) -> CheckPric
         device=device,
         service=service_id,
         country=country_name,
-        kurs_usdt_idr=float(raw.get("kurs") or 0),
         providers=raw.get("providers") or {},
         harga_jual=_harga_jual(raw, mark_up),
     )
