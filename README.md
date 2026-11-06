@@ -22,7 +22,7 @@ apisms/
 └─ data/
    ├─ providers.json        # api_key provider + api_key klien (tidak ikut git)
    ├─ service.json          # layanan + kode provider + daftar negara (sama dengan servers/ bot)
-   ├─ id_country.json       # daftar negara + ID numerik per provider
+   ├─ country.json          # daftar negara + ID numerik per provider
    └─ redis.py              # order Redis, kurs, cache priceraw
 ```
 

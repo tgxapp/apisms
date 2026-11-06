@@ -58,7 +58,7 @@ def _load_services(path: Path) -> dict:
 
 
 SERVICES = _load_services(DATA_DIR / "service.json")
-COUNTRIES = {item["name"].lower(): item for item in read_json(DATA_DIR / "id_country.json")}
+COUNTRIES = {item["name"].lower(): item for item in read_json(DATA_DIR / "country.json")}
 
 
 def check_api_key(value: str) -> bool:
